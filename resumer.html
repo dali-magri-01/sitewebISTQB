@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé de l'achat - Le Coin des Découvertes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <div class="logo">Le Coin des Découvertes</div>
+    <nav>
+        <a href="index.html">Retour aux articles</a>
+    </nav>
+</header>
+
+<main>
+    <section class="summary">
+        <h1>Résumé de l'achat</h1>
+        <table class="summary-table">
+            <thead>
+            <tr>
+                <th>Article</th>
+                <th>Prix Unitaire</th>
+                <th>Quantité</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody id="summary-items">
+            <!-- Les articles seront insérés ici dynamiquement -->
+            </tbody>
+        </table>
+        <div class="summary-total">
+            <h2>Total Général : <span id="summary-total">0.00€</span></h2>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© Belhaj Ouajdi, 2024. Tous droits réservés.</p>
+</footer>
+
+<script src="js/resumer.js"></script>
+</body>
+</html>

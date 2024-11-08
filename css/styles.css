@@ -1,0 +1,254 @@
+/* Couleurs principales */
+:root {
+    --primary-color: #4a90e2; /* Bleu principal */
+    --secondary-color: #6dcff6; /* Bleu clair */
+    --background-color: #f9f9f9; /* Fond général */
+    --text-color: #333333; /* Texte principal */
+    --card-background: #ffffff; /* Fond des cartes */
+    --button-hover: #3b78d8; /* Bleu foncé pour le hover */
+    --gradient: linear-gradient(135deg, #4a90e2, #6dcff6); /* Dégradé bleu */
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--gradient);
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Section articles */
+.articles {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.articles h1 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Article cards */
+.article-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.article-card h2 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.article-card .description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 10px 10px;
+}
+
+.article-card .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Quantity input */
+.article-card .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.article-card .quantity {
+    width: 60px;
+    height: 35px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: border-color 0.3s ease;
+}
+
+.article-card .quantity:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Buttons */
+.article-card .add-to-cart {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.article-card .add-to-cart:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--gradient);
+    color: white;
+    font-size: 0.9em;
+}
+/* Panier Section */
+.cart {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cart-table td {
+    background-color: var(--card-background);
+}
+
+.cart-summary {
+    text-align: right;
+}
+
+#cart-total {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+#checkout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: var(--button-hover);
+}
+/* Section Résumé */
+.summary {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.summary h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.summary-table th, .summary-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.summary-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.summary-table td {
+    background-color: var(--card-background);
+}
+
+.summary-total {
+    text-align: right;
+}
+
+#summary-total {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
