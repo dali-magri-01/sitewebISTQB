@@ -3,43 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résumé de l'achat - Le Coin des Découvertes</title>
+    <title>404 - Page non trouvée</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Style général */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <div class="logo">Le Coin des Découvertes</div>
-    <nav>
-        <a href="index.html">Retour aux articles</a>
-    </nav>
-</header>
+    <div class="container">
+        <h1>404</h1>
+        <p>Désolé, la page que vous cherchez n'existe pas ou a été déplacée.</p>
+        <a href="index.html" class="btn">Retour à l'accueil</a>
+    </div>
 
-<main>
-    <section class="summary">
-        <h1>Résumé de l'achat</h1>
-        <table class="summary-table">
-            <thead>
-            <tr>
-                <th>Article</th>
-                <th>Prix Unitaire</th>
-                <th>Quantité</th>
-                <th>Total</th>
-            </tr>
-            </thead>
-            <tbody id="summary-items">
-            <!-- Les articles seront insérés ici dynamiquement -->
-            </tbody>
-        </table>
-        <div class="summary-total">
-            <h2>Total Général : <span id="summary-total">0.00€</span></h2>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© Belhaj Ouajdi, 2024. Tous droits réservés.</p>
-</footer>
-
-<script src="js/resumer.js"></script>
+    
 </body>
 </html>
