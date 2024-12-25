@@ -1,123 +1,92 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Coin des Découvertes - Articles</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background: #2575fc;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #1a5fb4;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-    <div class="logo">Le Coin des Découvertes</div>
-    <nav>
-        <a href="panier.html" class="btn-panier">Mon Panier</a>
-    </nav>
-</header>
+  <div class="login-container">
+    <h1>Login</h1>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="handleLogin()">Login</button>
+    <p id="error" class="error-message"></p>
+  </div>
 
-<main>        <h1>Nos Articles</h1>
+  <script>
+    function handleLogin() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const error = document.getElementById('error');
 
-    <section class="articles">
-        <!-- Articles -->
-        <div class="article-card" data-id="1">
-            <img src="images/robe_femme.jpg" alt="Robe Élégante">
-            <div class="info">
-                <h2>Robe Élégante</h2>
-                <p class="description">Robe chic pour vos soirées.</p>
-                <p class="price">49.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
+      // Reset the error message
+      error.textContent = '';
 
-        <div class="article-card" data-id="2">
-            <img src="images/chemise_homme.jpg" alt="Chemise Classique">
-            <div class="info">
-                <h2>Chemise Classique</h2>
-                <p class="description">Parfaite pour le bureau ou les sorties.</p>
-                <p class="price">39.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="article-card" data-id="3">
-            <img src="images/pull_enfant.jpg" alt="Pull Enfant">
-            <div class="info">
-                <h2>Pull Enfant</h2>
-                <p class="description">Confortable et chaud pour l’hiver.</p>
-                <p class="price">19.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="article-card" data-id="4">
-            <img src="images/jean_homme.jpg" alt="Jean Slim Homme">
-            <div class="info">
-                <h2>Jean Slim Homme</h2>
-                <p class="description">Style décontracté et tendance.</p>
-                <p class="price">59.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="article-card" data-id="5">
-            <img src="images/tshirt_femme.jpg" alt="T-shirt Femme">
-            <div class="info">
-                <h2>T-shirt Femme</h2>
-                <p class="description">T-shirt en coton doux et léger.</p>
-                <p class="price">14.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="article-card" data-id="6">
-            <img src="images/pyjama_enfant.jpg" alt="Pyjama Enfant">
-            <div class="info">
-                <h2>Pyjama Enfant</h2>
-                <p class="description">Pyjama en coton avec motifs rigolos.</p>
-                <p class="price">24.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="article-card" data-id="7">
-            <img src="images/veste_femme.jpg" alt="Veste Femme">
-            <div class="info">
-                <h2>Veste Femme</h2>
-                <p class="description">Veste stylée pour l’automne.</p>
-                <p class="price">79.99€</p>
-                <div class="actions">
-                    <input type="number" class="quantity" min="1" value="1">
-                    <button class="add-to-cart">Ajouter au panier</button>
-                </div>
-            </div>
- 
-
-        <!-- Ajouter les autres articles ici... -->
-    </section>
-</main>
-
-<footer class="footer">
-    <p>© GoMyCode, 2025. Tous droits réservés.</p>
-</footer>
-
-<script src="js/scripts.js"></script>
+      // Check if the email and password match
+      if (email === '12345' && password === '12345') {
+        window.location.href = 'firstpage.html';
+      } else {
+        error.textContent = 'Invalid email or password. Please try again.';
+      }
+    }
+  </script>
 </body>
 </html>
